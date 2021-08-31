@@ -1,0 +1,27 @@
+
+
+<mat-grid-list cols="6" rowHeight="50px" *ngIf="facturasData">
+  <mat-grid-tile>Fecha</mat-grid-tile>
+    <mat-grid-tile>Nº Comprobante</mat-grid-tile>
+    <mat-grid-tile>
+      
+
+        <p style="margin-top: 20px;">Importe </p> 
+        <p style="margin-top: 20px;"> --{{ordenarBandera}}-- </p>
+        <button class="btn btn-secondary btn-sm" style="size: 5px;" (click)="ordenarFacturas()">Ordenar</button>
+      
+    </mat-grid-tile>
+    <mat-grid-tile>Nº Documento</mat-grid-tile>
+    <mat-grid-tile>Tipo Cod Aut</mat-grid-tile>
+    <mat-grid-tile>Detalle</mat-grid-tile>
+
+  <div *ngFor="let factura of facturasData">
+
+    <mat-grid-tile>{{factura.fecha}}</mat-grid-tile>
+    <mat-grid-tile>{{factura.ptoVta}} - {{factura.nroCmp}}</mat-grid-tile>
+    <mat-grid-tile>{{factura.importe}}</mat-grid-tile>
+    <mat-grid-tile>{{factura.nroDocRec}}</mat-grid-tile>
+    <mat-grid-tile>{{factura.tipoCodAut}}</mat-grid-tile>
+    <mat-grid-tile><a [routerLink]="['/detalle',factura.nroDocRec]" >Ver Detalle</a></mat-grid-tile>
+  </div>
+</mat-grid-list>

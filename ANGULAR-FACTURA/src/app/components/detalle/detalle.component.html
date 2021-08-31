@@ -1,0 +1,44 @@
+<hr>
+<div class="row" style="margin-left: 100px;" *ngIf="facturaDetalle">
+        <tr>
+            <td>
+                <h1 style="color: green; margin-top: 40px;">
+                    CUIT EMPRESA: {{ facturaDetalle.cuit }}
+                </h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <br >
+                <br >
+                <p>
+                    <b>Fecha: {{ facturaDetalle.fecha }}</b>
+                </p>
+                <p>
+                    <b>N° Comprobante: {{ facturaDetalle.ptoVta }} - {{ facturaDetalle.nroCmp }}</b>
+                </p>
+                <p>
+                    <b>Importe: {{ facturaDetalle.importe }}</b>
+                </p>
+                <p>
+                    <b>Moneda: {{ facturaDetalle.moneda }}</b>
+                </p>
+                <p>
+                    <b>Cliente Documento: {{ facturaDetalle.tipoDocRec }} : {{ facturaDetalle.nroDocRec }}</b>
+                </p>
+            </td>
+
+            <td>
+                <br >
+                <br >
+                <p><b>Cod. Autorizacion: {{facturaDetalle.codAut}}</b></p>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <button [routerLink]="['/home']" class="btn btn-secondary" >VOLVER</button>
+            </td>
+        </tr>
+</div>

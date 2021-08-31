@@ -1,0 +1,7 @@
+{
+    "/filesjson/listado_facturas.json":{
+        "target":"http://168.194.207.98:8081",
+        "secure":"false",
+        "logLevel": "debug"
+    }
+}
